@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='es'>
+	<head>
+		<meta charset='utf-8' />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Guata - {% block title %}{% endblock %}</title>
+		<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/base.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="{{STATIC_URL}}css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="{{STATIC_URL}}css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="{{STATIC_URL}}js/jquery-2.1.0.min.js"></script>
+		<script src="{{STATIC_URL}}js/bootstrap.min.js"></script>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+		{% block style_css %}{% endblock %}
+	</head>
+	<body>
+		<header>
+			{% block header %}{% endblock %}
+			<nav class="navbar navbar-inverse">
+        <section class="container">
+          <section class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Guata</a>
+          </section>
+          <section class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/">Inicio</a></li>
+              <li><a href="#about">Algo</a></li>
+              <li><a href="#contact">Algo 2</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="sectionider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </section><!--/.nav-collapse -->
+        </section>
+      </nav>
+		</header>
+		<section class="container theme-showcase" role="main">
+			{% block content %}{% endblock %}
+			<hr />
+			<footer>
+				<p>Pagina web donde encontraras todo lo necesario para crear recuerdos.</p>
+			</footer>
+		</section>
+	</body>
+</html>
